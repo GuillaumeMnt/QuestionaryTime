@@ -10,3 +10,11 @@
 
 //--- Common ---
 "common.close" = "close";
+
+//--- QTGameViewController ---
+"QTGameViewController.titleLabel" = "questionary time";
+"QTGameViewController.playButton" = "play";
+"QTGameViewController.rankButton" = "rank";
+
+//--- QTQuestionaryTime ---
+"QTQuestionaryTimeViewController.questionButton" = "previous";
