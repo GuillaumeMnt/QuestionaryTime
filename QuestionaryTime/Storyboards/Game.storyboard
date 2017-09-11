@@ -12,7 +12,7 @@
         <!--Game View Controller-->
         <scene sceneID="kNR-xb-Vfp">
             <objects>
-                <viewController storyboardIdentifier="DGGameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9fX-D6-VXk" customClass="DGGameViewController" customModule="DurandGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QTGameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9fX-D6-VXk" customClass="QTGameViewController" customModule="QuestionaryTime" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Euy-bc-rKj"/>
                         <viewControllerLayoutGuide type="bottom" id="ezn-LW-d5f"/>
@@ -28,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCe-y3-GS8" userLabel="playRanking">
-                                <rect key="frame" x="157" y="377" width="60" height="60"/>
+                                <rect key="frame" x="157.5" y="377" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="KeP-7B-HV4"/>
                                     <constraint firstAttribute="height" constant="60" id="SLh-JP-HnP"/>
@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4R-Ty-e85">
-                                <rect key="frame" x="157" y="295" width="60" height="60"/>
+                                <rect key="frame" x="157.5" y="295" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="xkB-KJ-Z3f"/>
                                 </constraints>
@@ -64,16 +64,61 @@
                         <outlet property="playRanking" destination="rCe-y3-GS8" id="3Bu-OI-smD"/>
                         <outlet property="titleLabel" destination="6Wk-g7-yem" id="jfB-qK-Rzi"/>
                         <segue destination="zou-jD-Kpe" kind="show" identifier="goToGame" id="MUp-mW-h0o"/>
+                        <segue destination="F86-Wv-Tpd" kind="show" id="gbQ-Gd-Ly4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYh-Em-gVG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1024.6376811594205" y="88.858695652173921"/>
         </scene>
+        <!--Rank View Controller-->
+        <scene sceneID="Pa3-yh-HW0">
+            <objects>
+                <viewController storyboardIdentifier="QTRankViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="F86-Wv-Tpd" customClass="QTRankViewController" customModule="QuestionaryTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DFR-pb-whA"/>
+                        <viewControllerLayoutGuide type="bottom" id="Axp-bp-VAS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="brH-zW-Krb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qj-XW-ZEr">
+                                <rect key="frame" x="24" y="84" width="327" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="reuseIdentifier" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LlH-Jb-TBg">
+                                <rect key="frame" x="0.0" y="125" width="375" height="542"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Axp-bp-VAS" firstAttribute="top" secondItem="LlH-Jb-TBg" secondAttribute="bottom" id="61x-mE-3J8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LlH-Jb-TBg" secondAttribute="trailing" constant="-16" id="9oJ-3K-5cp"/>
+                            <constraint firstItem="LlH-Jb-TBg" firstAttribute="top" secondItem="3Qj-XW-ZEr" secondAttribute="bottom" constant="20" id="PFE-xk-TAT"/>
+                            <constraint firstItem="LlH-Jb-TBg" firstAttribute="leading" secondItem="brH-zW-Krb" secondAttribute="leadingMargin" constant="-16" id="cny-Cg-Wwm"/>
+                            <constraint firstItem="3Qj-XW-ZEr" firstAttribute="top" secondItem="DFR-pb-whA" secondAttribute="bottom" constant="20" id="jdD-mI-FqS"/>
+                            <constraint firstItem="3Qj-XW-ZEr" firstAttribute="centerX" secondItem="brH-zW-Krb" secondAttribute="centerX" id="mHg-a3-XOB"/>
+                            <constraint firstItem="3Qj-XW-ZEr" firstAttribute="leading" secondItem="brH-zW-Krb" secondAttribute="leadingMargin" constant="8" id="oVy-FX-bma"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Qj-XW-ZEr" secondAttribute="trailing" constant="8" id="ytL-K0-I6e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelTitle" destination="3Qj-XW-ZEr" id="dzO-Go-Nom"/>
+                        <outlet property="tvRank" destination="LlH-Jb-TBg" id="I0T-Jf-Mwm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H9w-9N-rEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021.6" y="832.53373313343332"/>
+        </scene>
         <!--Questionary View Controller-->
         <scene sceneID="dNF-Sx-Q1u">
             <objects>
-                <viewController storyboardIdentifier="DGQuestionaryTableViewCell" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zou-jD-Kpe" customClass="DGQuestionaryViewController" customModule="DurandGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QTQuestionaryTableViewCell" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zou-jD-Kpe" customClass="QTQuestionaryViewController" customModule="QuestionaryTime" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dHp-IV-1EC"/>
                         <viewControllerLayoutGuide type="bottom" id="Zw9-qb-v5B"/>
@@ -147,7 +192,7 @@
         <!--Result View Controller-->
         <scene sceneID="pPE-if-vpQ">
             <objects>
-                <viewController storyboardIdentifier="DGResultViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b0U-ye-B9T" customClass="DGResultViewController" customModule="DurandGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QTResultViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b0U-ye-B9T" customClass="QTResultViewController" customModule="QuestionaryTime" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jrM-8R-8An"/>
                         <viewControllerLayoutGuide type="bottom" id="5ks-4m-fZs"/>

@@ -9,7 +9,7 @@
 import RealmSwift
 
 class RealmHelper {
-
+    
     static func objects<T: Object>(type: T.Type) -> Results<T>? {
         
         var allResult: Results<T>? = nil
@@ -85,7 +85,7 @@ extension Object {
             let realm = try Realm()
             
             try realm.write {
-                realm.add(self)
+                realm.add(self, update: true)
             }
         } catch let error as NSError {
             logger.error(error)

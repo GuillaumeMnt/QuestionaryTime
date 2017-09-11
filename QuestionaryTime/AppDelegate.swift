@@ -43,7 +43,6 @@ extension AppDelegate {
         IQKeyboardManager.shared().isEnabled = true
         IQKeyboardManager.shared().shouldShowTextFieldPlaceholder = false
         IQKeyboardManager.shared().toolbarDoneBarButtonItemText = "close"
-        // TODO: 📝 enable localisation for Localizable.strings, build the project and replace "close" with tr(.commonClose) (swiftgen generated string)
     }
 
     fileprivate func addAnalytics() {

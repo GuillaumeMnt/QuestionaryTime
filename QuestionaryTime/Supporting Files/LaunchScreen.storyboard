@@ -1,11 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F60a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wKg-7C-aPt">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="OQG-IM-vu7">
+            <objects>
+                <viewController id="wKg-7C-aPt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Un-0i-8pS"/>
+                        <viewControllerLayoutGuide type="bottom" id="A63-yK-Yzn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uzV-C2-qYO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questionary Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDa-qs-TAB">
+                                <rect key="frame" x="24" y="323" width="327" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="made by Guillaume Monot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWT-GC-8d5">
+                                <rect key="frame" x="26" y="384" width="323" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="DDa-qs-TAB" secondAttribute="trailing" constant="8" id="61n-MH-NdI"/>
+                            <constraint firstItem="aWT-GC-8d5" firstAttribute="top" secondItem="DDa-qs-TAB" secondAttribute="bottom" constant="40" id="7Rs-Kr-1bJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aWT-GC-8d5" secondAttribute="trailing" constant="10" id="Tzf-Lz-cay"/>
+                            <constraint firstItem="aWT-GC-8d5" firstAttribute="leading" secondItem="uzV-C2-qYO" secondAttribute="leadingMargin" constant="10" id="XPG-qu-6HU"/>
+                            <constraint firstItem="DDa-qs-TAB" firstAttribute="centerY" secondItem="uzV-C2-qYO" secondAttribute="centerY" id="ewo-Lo-Rbo"/>
+                            <constraint firstItem="DDa-qs-TAB" firstAttribute="leading" secondItem="uzV-C2-qYO" secondAttribute="leadingMargin" constant="8" id="nAC-Ho-GqE"/>
+                            <constraint firstItem="DDa-qs-TAB" firstAttribute="centerX" secondItem="uzV-C2-qYO" secondAttribute="centerX" id="x79-4i-jwY"/>
+                            <constraint firstItem="aWT-GC-8d5" firstAttribute="centerX" secondItem="uzV-C2-qYO" secondAttribute="centerX" id="xOq-ep-AZ0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="248-fY-h1X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="110" y="156"/>
+        </scene>
+    </scenes>
 </document>

@@ -8,12 +8,6 @@
 
 import Foundation
 
-// TODO: 📝 Fill QuestionaryTime's API URL
-
-/*
-** ⚠️ Supprimer la configuration ATS dans `info.plist` ⚠️
-*/
-
 /// QuestionaryTime's API
 enum QuestionaryTimeAPI {
 

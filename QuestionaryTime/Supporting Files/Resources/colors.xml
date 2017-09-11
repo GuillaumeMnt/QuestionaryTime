@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <color name="black">#000000</color>
-  <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="darkJungle">#0b222d</color>
+    <color name="gray">#504C49</color>
+    <color name="lightGray">#EFEFEF</color>
+    <color name="blackBlue">#102933</color>
+    <color name="blackerBlue">#091F2A</color>
+    <color name="violet">#623588</color>
+    <color name="lightBlue">#188DFB</color>
+    <color name="lightGreen">#78F6B2</color>
+    <color name="silver">#bdbebd</color>
+    <color name="isabeline">#ebebeb</color>
+    <color name="ashGrey">#b2b2b2</color>
+    <color name="veryLightGray">#CDD1D3</color>
+    <color name="tabbar_gradient_start">#061c27</color>
+    <color name="tabbar_gradient_end">#102a34</color>
 </resources>

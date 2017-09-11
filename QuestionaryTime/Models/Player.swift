@@ -7,43 +7,45 @@
 //
 
 import UIKit
-import Alamofire
 import RealmSwift
-import ObjectMapper
-import AlamofireObjectMapper
 
-class Player: Object, Mappable {
-
+class Player: Object {
+    
     // MARK: - Global
-
+    
     // MARK: - Internal
-    dynamic internal var identifier: NSNumber? = 0
-
+    dynamic internal var identifier: String = ""
+    dynamic internal var firstname: String?
+    dynamic internal var score: Int = 0
+    
     // MARK: - Mappable
-    convenience required init?(map: Map) {
+    convenience init(firstname: String, score: Int) {
         self.init()
+        self.firstname = firstname
+        self.score = score
     }
-
-    func mapping(map: Map) {
-        self.identifier <- map["id"]
-    }
-
+    
     // MARK: - Model meta informations
     override class func primaryKey() -> String? {
         return "identifier"
     }
-
+    
     override class func ignoredProperties() -> [String] {
         return []
     }
+    
+    func generateIdentifier() {
+        self.identifier = String(Date().timeIntervalSince1970)
+    }
+    
 }
 
 // MARK: - Player
 extension Player {
-
+    
     // MARK: - Network call
-
+    
     // MARK: - Privates Functions
-
+    
     // MARK: - Public Functions
 }

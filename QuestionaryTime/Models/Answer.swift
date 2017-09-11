@@ -7,43 +7,41 @@
 //
 
 import UIKit
-import Alamofire
 import RealmSwift
-import ObjectMapper
-import AlamofireObjectMapper
 
-class Answer: Object, Mappable {
-
+class Answer: Object {
+    
     // MARK: - Global
-
+    
     // MARK: - Internal
     dynamic internal var identifier: NSNumber? = 0
-
+    dynamic internal var value: String?
+    dynamic internal var isCorrect: Bool = false
+    
     // MARK: - Mappable
-    convenience required init?(map: Map) {
+    convenience required init(value: String, isCorrect: Bool = false) {
         self.init()
+        
+        self.value = value
+        self.isCorrect = isCorrect
     }
-
-    func mapping(map: Map) {
-        self.identifier <- map["id"]
-    }
-
+    
     // MARK: - Model meta informations
-    override class func primaryKey() -> String? {
-        return "identifier"
-    }
-
+    //    override class func primaryKey() -> String? {
+    //        return "identifier"
+    //    }
+    
     override class func ignoredProperties() -> [String] {
-        return []
+        return [""]
     }
 }
 
 // MARK: - Answer
 extension Answer {
-
+    
     // MARK: - Network call
-
+    
     // MARK: - Privates Functions
-
+    
     // MARK: - Public Functions
 }
