@@ -19,6 +19,7 @@ QuestionaryTime is one of my first iOS project, in this project, I learnt :
       - database (Realm)
       - request
       - use of Pod
+      - shuffle mode (random)
       - parsing
       - translations
   - UI
